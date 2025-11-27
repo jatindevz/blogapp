@@ -95,7 +95,7 @@ export default function BlogPost({ post }) {
                     {/* Featured image */}
                     <div className="relative h-64 md:h-96 rounded-xl overflow-hidden mb-8">
                         <Image
-                            src={post.image || "/placeholder.svg?height=400&width=800"}
+                            src={"/futureofai.jpg?height=400&width=800" || "/placeholder.svg?height=400&width=800"}
                             alt={post.title}
                             fill
                             className="object-cover"
