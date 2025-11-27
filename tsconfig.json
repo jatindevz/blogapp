@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/layout.jsx", "src/components/ui/confetti.jsx", "src/components/ui/shiny-button.jsx"],
   "exclude": ["node_modules"]
 }

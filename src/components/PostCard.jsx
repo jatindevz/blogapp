@@ -4,14 +4,14 @@ import { Calendar, Clock, ArrowRight } from "lucide-react"
 
 export default function PostCard({ post }) {
     return (
-        <article className="glass-card rounded-lg border border-[#2a2a2a]/30 p-6 hover:bg-[#1a1a1a]/70 transition-all duration-300 group hover:scale-105 hover:shadow-xl hover:shadow-vo/8">
+        <article className=" rounded-lg border border-[#2a2a2a]/30 p-6 transition-all duration-300 group  w-sm">
             {/* Featured Image */}
             <div className="relative h-48 mb-6 rounded-lg overflow-hidden">
                 <Image
-                    src={post.image || "/placeholder.svg?height=200&width=400"}
+                    src={"/futureofai.jpg?height=400&width=600"}
                     alt={post.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 to-transparent" />
 

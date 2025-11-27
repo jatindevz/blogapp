@@ -1,5 +1,7 @@
 import "./globals.css"
 import Navigation from "@/components/Navigation"
+import SplashCursor from "@/components/ui/SplashCursor"
+
 
 export const metadata = {
   title: "FutureBlog - Modern Tech Insights",
@@ -11,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className="bg-dark text-text-primary min-h-screen">
+        <SplashCursor />
         <div className="relative">
           {/* Background gradient */}
           <div className="fixed inset-0 bg-gradient-to-br from-dark via-dark to-dark-lighter -z-10" />

@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useState } from "react"
 import { Menu, X, Search } from "lucide-react"
+import { BorderBeam } from "./ui/border-beam"
+
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +16,7 @@ export default function Navigation() {
     ]
 
     return (
-        <nav className="sticky top-0 z-50 glass-card border-b border-dark-border/30">
+        <nav className="sticky top-0 z-50 glass-card border-b border-dark-border/30 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
@@ -70,6 +72,9 @@ export default function Navigation() {
                     </div>
                 )}
             </div>
+         
+            
+
         </nav>
     )
 }
