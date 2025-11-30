@@ -2,19 +2,30 @@
 
 import { useEffect } from "react"
 import { usePathname, useSearchParams } from "next/navigation"
+import { Suspense } from "react"
 
-export default function Analytics() {
+export const dynamic = "force-dynamic"
+
+function AnalyticsInner() {
     const pathname = usePathname()
     const searchParams = useSearchParams()
 
     useEffect(() => {
         if (!pathname) return
 
-        const url = pathname + searchParams.toString()
+        const url = pathname + (searchParams?.toString() ? `?${searchParams}` : "")
         window.gtag?.("event", "page_view", {
             page_path: url,
         })
     }, [pathname, searchParams])
 
     return null
+}
+
+export default function Analytics() {
+    return (
+        <Suspense fallback={null}>
+            <AnalyticsInner />
+        </Suspense>
+    )
 }
