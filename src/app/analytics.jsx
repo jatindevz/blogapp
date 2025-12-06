@@ -13,10 +13,14 @@ function AnalyticsInner() {
     useEffect(() => {
         if (!pathname) return
 
+
         const url = pathname + (searchParams?.toString() ? `?${searchParams}` : "")
         window.gtag?.("event", "page_view", {
             page_path: url,
         })
+
+        console.log("Logged page view:", url);
+        
     }, [pathname, searchParams])
 
     return null
